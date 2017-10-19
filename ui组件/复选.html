@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+		window.onload=function(){
+			var oBtn=document.querySelector('#button');
+			var aPt=document.querySelectorAll('.input');
+			oBtn.addEventListener('tap',function(){
+				//var aVal=new Array();
+				var num=0;
+				for(var i=0;i<aPt.length;i++){
+					if(aPt[i].checked){
+						num++;
+						mui.toast(aPt[i].value);
+					//aVal[num]=aPt[i].value;	
+					//aVal[aVal.length++]=aPt[i].value;	
+					}
+				}
+				if(num==aPt.length){
+					mui.toast(aPt[0].value+ ''+aPt[1].value);
+				}
+				if(num==0){
+					mui.toast('请选择');
+				}
+				//mui.toast(aVal);
+			})
+			
+		}
+			mui.init()
+		</script>
+		<header class="mui-bar mui-bar-nav">
+		    <h1 class="mui-title">复选</h1>
+		</header>
+		<div class="mui-content">
+		    <div class="mui-input-row mui-checkbox ">
+		        <label>看书</label>
+		        <input name="Checkbox" type="checkbox" value="看书" class="input">
+		    </div>
+		    <div class="mui-input-row mui-checkbox ">
+		        <label>跑步</label>
+		        <input name="Checkbox" type="checkbox" value="跑步" class="input">
+		    </div>
+		   <button type="button" class="mui-btn mui-btn-blue" id="button">提交</button> 
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<header class="mui-bar mui-bar-nav">
+		    <h1 class="mui-title">消息框</h1>
+		</header>
+		<div class="mui-content">
+		   
+		</div>
+	</body>
+    <script type="text/javascript">
+    	/*mui.alert('欢迎使用Hello MUI', 'Hello MUI', function() {
+   mui.toast('你刚关闭了警告框');
+});
+var btnArray = ['取消', '确定'];
+mui.confirm('真的要删除吗？','Hi...',new Array('否','是'),function(e){
+   if(e.index == 1){mui.toast('是');}else{mui.toast('否');}
+});*/
+var btnArray = ['取消', '确定'];
+mui.prompt('请输入您的姓名？','Hi...',new Array('取消','确定'),function(e){
+    if(e.index == 1){
+        mui.toast(e.value);
+    }else{
+        mui.toast('您取消了输入');
+    }
+});
+
+    </script>
+</html>
