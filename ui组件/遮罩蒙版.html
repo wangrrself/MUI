@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+	     .mui-backdrop {
+		    position: fixed;
+		    top: 0;
+		    right: 0;
+		    bottom: 0;
+		    left: 0;
+		    z-index: 998;
+		    background-color: rgba(0,0,0,.3);
+		    }
+		/*.div{
+			width:100px;
+			height:100px;
+			background-color:red;
+		    margin-top: 100px;}*/
+		</style>
+	</head>
+
+	<body>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<header class="mui-bar mui-bar-nav">
+		    <h1 class="mui-title">遮罩蒙版</h1>
+		</header>
+		<div class="mui-content">
+		  
+		  <div class="mui-backdrop" ></div>
+		  	
+		  
+		</div>
+	</body>
+<script type="text/javascript">
+			var mask = mui.createMask(callback);
+			mask.show();
+			mask.close();
+  </script>
+</html>
