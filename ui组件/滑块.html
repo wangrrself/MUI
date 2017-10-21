@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<header class="mui-bar mui-bar-nav">
+		    <h1 class="mui-title">滑块</h1>
+		</header>
+		<div class="mui-content">
+		    <div class="mui-input-row mui-input-range">
+		        <label>Range</label>
+		        <input type="range" min="0" max="100" value="50" id="range1">
+		    </div>
+		    <div style="padding:20px;">
+			    <input type="button" class="mui-btn" value="获取滑块值" onclick="getVal();" />
+			</div>
+		</div>
+	</body>
+<script type="text/javascript">
+	function getVal(){
+    var rangeObj = mui('#range1');
+    mui.toast(rangeObj[0].value);
+    }
+</script>
+</html>
